@@ -17,11 +17,5 @@ git submodule add -b master -f --name naturepluginutils https://github.com/natur
 Run the following command to update:
 
 ```sh
-git submodule foreach --recursive git pull
-```
-
-If that doesn't work, try:
-
-```sh
 cd ./src/main/java/dev/naturecodevoid/spigot/naturepluginutils && git fetch && git pull && cd ../../../../../../../
 ```
