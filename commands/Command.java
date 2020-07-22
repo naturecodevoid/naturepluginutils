@@ -23,13 +23,15 @@ public class Command implements CommandExecutor {
     }
 
     protected void init() {
-        // Add subcommands and command aliases here
+        // Run other initialization code here
     }
 
     public boolean onCommand(CommandSender sender, org.bukkit.command.Command command, String label, String[] args) {
-        if (validSubcommand(Array.get(args, 0).toString())) {
-            Object[] argsNoSubCommand = ArrayUtils.removeElement(args, Array.get(args, 0));
-            subCommandsClasses.get(subCommandsLowerCase.indexOf(Array.get(args, 0).toString().toLowerCase())).run(sender, (String[]) argsNoSubCommand);
+        if (args.length > 0) {
+            if (validSubcommand(Array.get(args, 0).toString())) {
+                Object[] argsNoSubCommand = ArrayUtils.removeElement(args, Array.get(args, 0));
+                subCommandsClasses.get(subCommandsLowerCase.indexOf(Array.get(args, 0).toString().toLowerCase())).run(sender, (String[]) argsNoSubCommand);
+            }
         } else {
             return run(sender, command, label, args);
         }

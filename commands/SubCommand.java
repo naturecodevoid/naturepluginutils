@@ -18,6 +18,6 @@ public class SubCommand {
     }
 
     public ArrayList<String> getTabComplete(CommandSender sender, org.bukkit.command.Command command, String label, String[] args) {
-        throw new org.apache.commons.lang.NotImplementedException();
+        throw new NotImplementedException();
     }
 }
