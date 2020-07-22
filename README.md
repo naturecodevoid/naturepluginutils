@@ -23,5 +23,5 @@ git submodule foreach --recursive git pull
 If that doesn't work, try:
 
 ```sh
-git fetch && git pull
+cd ./src/main/java/dev/naturecodevoid/spigot/naturepluginutils && git fetch && git pull && cd ../../../../../../../
 ```
